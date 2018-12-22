@@ -13,7 +13,8 @@ import AppTitle from '../components/AppTitle.js'
 
 export default class LoginScreen extends React.Component {
   static navigationOptions ={
-    headerTitle: <AppTitle />,  
+    headerTitle: <AppTitle />,
+    headerStyle:{backgroundColor:"navy"}
   }  
   
   render(){
