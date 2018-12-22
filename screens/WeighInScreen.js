@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput } from '
 
 import AppTitle from '../components/AppTitle.js'
 
-export default class LoginScreen extends React.Component {
+export default class WeighInScreen extends React.Component {
   static navigationOptions ={
     headerTitle: <AppTitle />,
     headerStyle:{backgroundColor:"navy"}
@@ -13,23 +13,18 @@ export default class LoginScreen extends React.Component {
     return(
       <View style={styles.container}>
         <View style={styles.inputSections}>
-          <View>
-            <Text style={styles.labelStyle}>Player Name</Text>
-            <TextInput placeholder="Mary Runner" style={styles.inputBoxStyle} />
-          </View>
-          <View>
-            <Text style={styles.labelStyle}>Password</Text>
-            <TextInput placeholder="1" style={styles.inputBoxStyle} />
-          </View>
+          <Text style={styles.weighInHeader}>Mary Runner</Text>
+          <Text style={styles.weighInHeader}>Please Enter Your Weight</Text>
+          <TextInput placeholder="Type 190" style={styles.inputBoxStyle} />
         </View>
         <TouchableOpacity 
           style={styles.submitButtonSection} >
-          <Text style={styles.buttonStyle}>Log In</Text>
+          <Text style={styles.buttonStyle}>Submit Weight</Text>
         </TouchableOpacity>
         <View style={styles.inspirationSection}>
           <Text style={styles.inspirationHeader}>Ramdom Inspirational Quote of the Day</Text>
           <Text style={styles.inspirationData}>You are What you eat, so don't be FAST, CHEAP, EASY, or FAKE</Text>
-        </View>
+        </View>        
       </View>
     
     );
@@ -43,24 +38,24 @@ const styles = StyleSheet.create({
     justifyContent:"space-around",
     backgroundColor:"#ADD8E6"
   },
-  labelStyle:{
-    color: "black",
+  weighInHeader:{
     fontWeight:"bold",
-    fontSize:24
+    fontSize:24,
+    textAlign:"center"
+  },
+  inputSections:{
+    flex: 2,
+    justifyContent:"center"
   },
   inputBoxStyle:{
     borderStyle:"solid",
     borderWidth:1,
-    borderColor:"black",
+    borderColor:"#404040",
     backgroundColor:"white",
     marginTop: 10,
     textAlign:"center",
     color:"#404040",
     fontSize:24
-  },
-  inputSections:{
-    flex: 2,
-    justifyContent:"center"
   },
   submitButtonSection:{
     flex:1,
@@ -78,7 +73,7 @@ const styles = StyleSheet.create({
     padding:12,
     textAlign:"center",
     overflow:"hidden",
-    width:"50%",
+    //width:"50%",
     elevation: 1
   },
   inspirationSection:{
@@ -91,8 +86,7 @@ const styles = StyleSheet.create({
   inspirationData:{
     textAlign:"center"
   }
-    
-    
 });
+
 
 
