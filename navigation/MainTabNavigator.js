@@ -5,6 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import LoginScreen from '../screens/LoginScreen';
 import WeighInScreen from '../screens/WeighInScreen';
+import RankingScreen from '../screens/RankingScreen';
 
 const LoginStack = createStackNavigator({
   Login: LoginScreen,
@@ -42,8 +43,27 @@ WeighInStack.navigationOptions = {
   ),
 };
 
+const RankingStack = createStackNavigator({
+  Ranking: RankingScreen,
+});
+
+RankingStack.navigationOptions = {
+  tabBarLabel: 'Ranking',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-information-circle${focused ? '' : '-outline'}`
+          : 'md-information-circle'
+      }
+    />
+  ),
+};
+
 
 export default createBottomTabNavigator({
   LoginStack,
-  WeighInStack
+  WeighInStack,
+  RankingStack
 });
