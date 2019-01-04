@@ -12,6 +12,7 @@ export default class WeighInScreen extends React.Component {
   render(){
     return(
       <View style={styles.container}>
+        <View style={styles.pageTitle}><Text >Weigh-In</Text></View>
         <View style={styles.inputSections}>
           <Text style={styles.weighInHeader}>Mary Runner</Text>
           <Text style={styles.weighInHeader}>Please Enter Your Weight</Text>
@@ -38,6 +39,11 @@ const styles = StyleSheet.create({
     justifyContent:"space-around",
     backgroundColor:"#ADD8E6"
   },
+  pageTitle:{
+    flex: 1,
+    alignItems:"center",
+    fontSize:18
+  },
   weighInHeader:{
     fontWeight:"bold",
     fontSize:24,
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
   },
   inputSections:{
     flex: 2,
-    justifyContent:"center"
+    //justifyContent:"center"
   },
   inputBoxStyle:{
     borderStyle:"solid",
