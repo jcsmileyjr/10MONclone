@@ -13,11 +13,19 @@ export default class RankingScreen extends React.Component {
     return(
       <View style={styles.container}>
         <View style={styles.pageTitle}><Text>Player Ranking</Text></View>
-        <View style={styles.rankingHeadingSection}>
-          <View style={styles.rankingHeading}><Text>Rank</Text></View>
-          <View style={styles.rankingHeading}><Text>Player Name</Text></View>
-          <View style={styles.rankingHeading}><Text>Total Weight Loss</Text></View>
+        <View style={styles.rankingSection}>
+          <View style={styles.rankingHeading}>
+            <View ><Text>Rank</Text></View>
+            <View ><Text>Player Name</Text></View>
+            <View ><Text>Total Weight Loss</Text></View>
+          </View>
+          <View style={styles.rankingHeading}>
+            <View ><Text>1</Text></View>
+            <View ><Text>Swaying Elephant</Text></View>
+            <View ><Text>9.8 lbs</Text></View>
+          </View>
         </View>
+        
       </View>
     
     );
@@ -36,13 +44,15 @@ const styles = StyleSheet.create({
     alignItems:"center",
     fontSize:18
   },
-  rankingHeadingSection:{
-    flex: 5,
-    flexDirection: "row",
+  rankingSection:{
+    flex: 3,
     alignItems:"center"
   },
   rankingHeading:{
-    flex: 1
+    flex: 1,
+    flexDirection: "row",
+    alignItems:"center",
+    justifyContent:"space-around"
   }
     
 });
